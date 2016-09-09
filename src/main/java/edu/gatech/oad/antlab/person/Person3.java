@@ -48,6 +48,6 @@ public class Person3 {
 		StringBuilder str = new StringBuilder();
 		str.append(input);
 
-	  return str.reverse();
+	  return str.reverse().toString();
 	}
 }
