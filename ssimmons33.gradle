@@ -1,0 +1,21 @@
+defaultTasks 'jar'
+
+apply plugin: 'java'
+
+dependencies {
+    compile files ('lib/resources.jar');
+}
+
+//Define the contents of the jar file
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': '1.0', 'Main-Class' : 'AntLabMain'
+    }
+}
+
+//Set up a location of repositories so that any needed library dependencies can be downloaded
+repositories {
+    mavenCentral()
+}
+
+task compileTest (dependsOn: compileTestJava )<<{}
